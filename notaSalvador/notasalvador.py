@@ -79,12 +79,19 @@ def fill(value, description, cnae, aliq):
         
 ###############################################
 result = []
+
 def read(path):
     with open(path, 'r') as inputfile:
-        getinput = csv.DictReader(inputfile)
-        for row in getinput:
-            result.append(row)
-
+        try:
+            getinput = csv.DictReader(inputfile)
+            for row in getinput:
+                result.append(row)
+        except KeyError:
+            getinput = csv.DictReader(inputfile, delimiter = ';')
+            for row in getinput:
+                result.append(row)
+        except:
+            raise
     return result
 ###############################################
 
