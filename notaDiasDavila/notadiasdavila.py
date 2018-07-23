@@ -59,8 +59,7 @@ def read(path):
 
 
 def navigate(cnpj, value, description, cnae, aliq):
-    driver.get(
-        'https://diasdavila.saatri.com.br/DocumentoFiscalAutenticado/Emitir')
+    driver.get('https://diasdavila.saatri.com.br/DocumentoFiscalAutenticado/Emitir')
     cnpjField = driver.find_element_by_id('txt_CpfCnpj')
     cnpjField.clear()
     cnpjField = cnpjField.send_keys(cnpj)
@@ -87,7 +86,7 @@ def navigate(cnpj, value, description, cnae, aliq):
         # aliquota        = driver.find_element_by_xpath('//*[@id="cbb_AliquotaSimplesNacional"]/option[4]').click()
         aliqField = driver.find_element_by_xpath('//*[@id="DocumentoFiscalItem_AliquotaIss"]')
         aliqField = aliqField.send_keys(aliq)
-        #emitir = driver.find_element_by_id('btn_Emitir').click()
+        emitir = driver.find_element_by_id('btn_Emitir').click()
     except:
 
         # bota  oSearch     = driver.find_element_by_xpath('//*[@id="btn_LocalizarContribuinte"]/span[1]').click()
@@ -105,7 +104,7 @@ def navigate(cnpj, value, description, cnae, aliq):
         # aliquota        = driver.find_element_by_xpath('//*[@id="cbb_AliquotaSimplesNacional"]/option[4]').click()
         aliqField = driver.find_element_by_xpath('//*[@id="DocumentoFiscalItem_AliquotaIss"]')
         aliqField = aliqField.send_keys(aliq)
-        #emitir = driver.find_element_by_id('btn_Emitir').click()
+        emitir = driver.find_element_by_id('btn_Emitir').click()
 
 
 def interface():
