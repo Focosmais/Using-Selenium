@@ -1,9 +1,7 @@
 #/bin/env/python3
 # -*- coding: utf-8 -*-
 from selenium import webdriver
-from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
-#from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoSuchWindowException
 from selenium.common.exceptions import WebDriverException
