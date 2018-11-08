@@ -1,0 +1,8 @@
+
+TODO:
+  ☐ Read  - Gets the company list with passwords ands cnpjs
+  ☐ Login - Access https://nfse.salvador.ba.gov.br and login with cnpj and passwords presents on the table
+  ☐ Fat   - While logged, takes webdriver to https://nfse.salvador.ba.gov.br/site/contribuinte/nota/consulta.aspx, write down the correct period(month) and get the income total of it, writing it on the registry.
+  ☐ XML   - On the fat window, exports all nfse as XML
+  ☐ ISS   - Goes to https://nfse.salvador.ba.gov.br/site/contribuinte/guia/guias.aspx and check if the company have pending ISS. Case positive, download it and write "ok" on the registry
+  ☐ Write - Write the final registry on a file named "outputfile.csv". Besides that, it keep appending the new entries on "partial_output.csv" and the error log on "log.csv"
